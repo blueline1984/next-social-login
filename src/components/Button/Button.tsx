@@ -6,12 +6,13 @@ type IButton = {
   color: "primary" | "naver" | "kakao";
   withIcon?: boolean;
   iconName: string;
+  onClick: () => void;
 };
 
-const Button = ({ children, color, withIcon, iconName }: IButton) => {
+const Button = ({ children, color, withIcon, iconName, onClick }: IButton) => {
   return (
     <>
-      <S.Button color={color}>
+      <S.Button color={color} onClick={onClick}>
         {withIcon && <S.Icon iconName={iconName} />}
         <S.ButtonText>{children}</S.ButtonText>
       </S.Button>

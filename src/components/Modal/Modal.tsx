@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react";
 import * as S from "./Modal.styled";
-import Button from "@/components/Button/Button";
 
 type IModal = {
   children: ReactNode;
